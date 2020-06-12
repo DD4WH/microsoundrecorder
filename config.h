@@ -46,7 +46,7 @@
 #define _I2S_TYMPAN     7 // I2S (16 bit tympan stereo audio audio) for use the tympan board
 #define _I2S_TDM        8 // I2S (8 channel TDM) // only first 5 channels are used (modify myAcq.h if less or more channels)
 
-#define ACQ   _I2S_QUAD  // selected acquisition interface  //<<<======>>>
+#define ACQ   _I2S_32_MONO  // selected acquisition interface  //<<<======>>>
 
 // For ADC SE pins can be changed
 #if ACQ == _ADC_0
@@ -92,7 +92,7 @@ typedef struct
 //  acquire whole day (from midnight to noon and noot to midnight)
 //
 
-ACQ_Parameters_s acqParameters = { 30, 10, 60, 0, 12, 12, 24, 0, "TDM"}; //<<<======>>>
+ACQ_Parameters_s acqParameters = { 60, 60, 180, 3, 9, 22, 23, 0, "DD4W"}; //<<<======>>>
 
 // the following global variable may be set from anywhere
 // if one wanted to close file immediately
